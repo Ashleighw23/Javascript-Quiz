@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="time" style="text-align: center">60</h2>
+    <main id="main">
+        <div id="start-container">
+            <h1>Fundamentals of Javascript Quiz!</h1>
+            <button id="start">Start Quiz!</button>
+        </div>
+        <div id="question-container" class="hide">
+           <!-- Questions go here -->
+        </div>
+        <div id="end-container" class="hide">
+            <h1 id="score">0</h1>
+            <form id="initials-form">
+                <input type="text" id='user'/>
+                <input type="submit" value="Submit"/>
+            </form>
+
+         </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
