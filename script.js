@@ -1,45 +1,23 @@
-//var timeEl = document.querySelector(".time");
-// var mainEl = document.getElementById("main");
-// var addButton = document.querySelector("#start");
-
-// var secondsLeft = 60;
-
-// function setTime() {
-//     var timerInterval = setInterval(function() {
-//         secondsLeft--;
-//         timeEl.textContent = secondsLeft + " seconds left till quiz ends!.";
-    
-//         if(secondsLeft === 0) {
-//             clearInterval(timerInterval);
-//             sendMessage();
-//     }
-
-//   }, 1000);
-// }
-// addButton.addEventListener("click", function() {
-
-// }
-
 var questions = [
     { 
-        title: "What is you favorite color? 1",
-        choices: ["red","blue","pink","green"],
-        answer: "red"
+        title1: "What does var stand for?",
+        choices: ["variable","volcano","value","volume"],
+        answer: "variable"
     },
     { 
-        title: "What is you favorite color? 2",
-        choices: ["red","blue","pink","green"],
-        answer: "blue"
+        title2: "What are the 4 primitive types?",
+        choices: ["integer,booleans,undefined,value","undefined,string,numbers,booleans","decimal,integer,modulus,comparison","arrays,decimal,undefined, string"],
+        answer: "undefined,string,numbers,booleans"
     },
     { 
-        title: "What is you favorite color? 3",
-        choices: ["red","blue","pink","green"],
-        answer: "pink"
+        title3: "What is an array?",
+        choices: ["allows you to test more than one condition","evaluates to true","Stores groups of data in a single variable","takes in two or more expressions"],
+        answer: "Stores groups of data in a single variable"
     },
     { 
-        title: "What is you favorite color? 4",
-        choices: ["red","blue","pink","green"],
-        answer: "green"
+        title4: "What are the 4 methods?",
+        choices: ["add,subtract, multiply, and divide","sort,push,slice,and replace","commit, push, message, pull","if, if else, function, array"],
+        answer: "sort,push,slice,and replace"
     },
 ]
 
@@ -68,7 +46,7 @@ var showQuestion = function() {
     var q = questions[questionIndex];
     var template = `
         <div>
-            <h3>${q.title}</h3>
+            <h3>${q.title1}</h3>
             <p class="choice">${q.choices[0]}</p>
             <p class="choice">${q.choices[1]}</p>
             <p class="choice">${q.choices[2]}</p>
@@ -80,6 +58,7 @@ var showQuestion = function() {
 }
 
 document.querySelector("#question-container").addEventListener("click", function(event) {
+
     if (event.target.classList.contains("choice")) {
         var q = questions[questionIndex];
         if (q.answer === event.target.textContent) {
