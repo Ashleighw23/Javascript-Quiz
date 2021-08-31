@@ -71,7 +71,7 @@ document.querySelector("#question-container").addEventListener("click", function
 
         questionIndex++;
 
-        if (q.length === questionIndex) {
+        if (questions.length === questionIndex) {
             endGame();
         } else {
             showQuestion();
@@ -103,3 +103,4 @@ document.querySelector("#initials-form").addEventListener("submit", function(eve
     //store it
     localStorage.setItem("data", JSON.stringify(dataEntry));
 })
+//you’ll also want to declare the score variable somewhere in the global scope (like up with your timer and time variables, and assign it a starting value of 0. Otherwise it will be assigned a starting value of undefined, and you won’t be able to increment that
