@@ -1,21 +1,21 @@
 var questions = [
     { 
-        title1: "What does var stand for?",
+        title: "What does var stand for?",
         choices: ["variable","volcano","value","volume"],
         answer: "variable"
     },
     { 
-        title2: "What are the 4 primitive types?",
+        title: "What are the 4 primitive types?",
         choices: ["integer,booleans,undefined,value","undefined,string,numbers,booleans","decimal,integer,modulus,comparison","arrays,decimal,undefined, string"],
         answer: "undefined,string,numbers,booleans"
     },
     { 
-        title3: "What is an array?",
+        title: "What is an array?",
         choices: ["allows you to test more than one condition","evaluates to true","Stores groups of data in a single variable","takes in two or more expressions"],
         answer: "Stores groups of data in a single variable"
     },
     { 
-        title4: "What are the 4 methods?",
+        title: "What are the 4 methods?",
         choices: ["add,subtract, multiply, and divide","sort,push,slice,and replace","commit, push, message, pull","if, if else, function, array"],
         answer: "sort,push,slice,and replace"
     },
@@ -44,9 +44,9 @@ document.querySelector("#start").addEventListener("click", function() {
 var questionIndex = 0;
 var showQuestion = function() {
     var q = questions[questionIndex];
-    var template = `
+    var question1 = `
         <div>
-            <h3>${q.title1}</h3>
+            <h3>${q.title}</h3>
             <p class="choice">${q.choices[0]}</p>
             <p class="choice">${q.choices[1]}</p>
             <p class="choice">${q.choices[2]}</p>
@@ -54,7 +54,9 @@ var showQuestion = function() {
         </div>
     `;
 
-    document.querySelector("#question-container").innerHTML = template;
+    document.querySelector("#question-container").innerHTML = question1;
+    
+  
 }
 
 document.querySelector("#question-container").addEventListener("click", function(event) {
